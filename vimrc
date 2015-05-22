@@ -68,6 +68,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'zah/nimrod.vim'
+Plugin 'jvoorhis/coq.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,6 +139,7 @@ let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
 
 " esay compile
+nmap 7 :w<CR>:!coqc %<CR>
 nmap 5 :w<CR>:!nim c -r --verbosity:2 %<CR>
 nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -std=c++14 % -oa.out;./a.out<CR>
 nmap 3 :w<CR>:!clang++ --version;clang++ -std=c++14 % -oa.out;./a.out<CR>

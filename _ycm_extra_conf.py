@@ -88,6 +88,8 @@ flags = [
 '-isystem',
 '/usr/include/c++/4.9',
 '-isystem',
+'/usr/include/x86_64-linux-gnu/c++/4.9',
+'-isystem',
 '~/projects/rain/source/shared',
 ]
 

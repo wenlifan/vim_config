@@ -28,6 +28,7 @@ syntax on
 set path+=/usr/include
 set path+=/usr/local/include
 set path+=/usr/include/c++/4.9
+set path+=~/projects/rain/source/shared
 
 let mapleader=","
 
@@ -140,6 +141,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " esay compile
 nmap 7 :w<CR>:!coqc %<CR>
+nmap 6 :w<CR>:!python3 %<CR>
 nmap 5 :w<CR>:!nim c -r --verbosity:2 %<CR>
 nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -std=c++14 % -oa.out;./a.out<CR>
 nmap 3 :w<CR>:!clang++ --version;clang++ -std=c++14 % -oa.out;./a.out<CR>

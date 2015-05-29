@@ -87,6 +87,8 @@ flags = [
 '/usr/local/include',
 '-isystem',
 '/usr/include/c++/4.9',
+'-isystem',
+'~/projects/rain/source/shared',
 ]
 
 

@@ -16,7 +16,7 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
-set mouse=a
+set mouse=v
 set history=100		" keep 50 lines of command line history
 set softtabstop=4
 set tabstop=4

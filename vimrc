@@ -29,7 +29,6 @@ set path+=/usr/include
 set path+=/usr/local/include
 set path+=/usr/include/c++/4.9
 set path+=/usr/include/x86_64-linux-gnu/c++/4.9
-set path+=~/projects/rain/source/shared
 
 let mapleader=","
 

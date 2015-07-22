@@ -141,6 +141,7 @@ let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
 
 " esay compile
+nmap r :w<CR>:!./%<CR>
 nmap 8 :w<CR>:!ruby %<CR>
 nmap 7 :w<CR>:!coqc %<CR>
 nmap 6 :w<CR>:!lua %<CR>

@@ -67,8 +67,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
-Plugin 'rust-lang/rust.vim'
-Plugin 'phildawes/racer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -138,12 +136,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
 
-" racer
-let $RUST_SRC_PATH="/home/mogu/.cargo/rustc-1.2.0/src"
-
 " esay compile
 nmap r :w<CR>:!./%<CR>
-nmap 7 :w<CR>:!cargo run<CR>
-nmap 6 :w<CR>:!lua %<CR>
 nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>
 nmap 3 :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

@@ -38,8 +38,8 @@ map Q gq
 inoremap <C-U> <C-G>u<C-U>
 
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+    command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+                \ | wincmd p | diffthis
 endif
 
 " vundle
@@ -67,6 +67,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -135,6 +136,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
+
+" indentLine
+let g:identLine_enabled = 1
 
 " esay compile
 nmap r :w<CR>:!./%<CR>

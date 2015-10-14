@@ -105,6 +105,8 @@ let g:airline_theme = 'badwolf'
 nmap 2 :bn<CR>
 nmap 1 :bp<CR>
 nmap 0 :bd<CR>
+nmap j :cn<CR>
+nmap k :cp<CR>
 
 " ctrlp
 let g:ctrlp_map = '<c-\>'

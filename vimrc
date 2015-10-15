@@ -102,12 +102,6 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 
-nmap 2 :bn<CR>
-nmap 1 :bp<CR>
-nmap 0 :bd<CR>
-nmap j :cn<CR>
-nmap k :cp<CR>
-
 " ctrlp
 let g:ctrlp_map = '<c-\>'
 let g:ctrlp_cmd = 'CtrlP .'
@@ -141,6 +135,12 @@ let g:UltiSnipsEditSplit="vertical"
 
 " indentLine
 let g:identLine_enabled = 1
+
+nmap 2 :bn<CR>
+nmap 1 :bp<CR>
+nmap 0 :bd<CR>
+nmap  :cp<CR>
+nmap  :cn<CR>
 
 " esay compile
 nmap r :w<CR>:!./%<CR>

@@ -68,6 +68,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
 Plugin 'Yggdroot/indentLine'
+Plugin 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -144,5 +145,6 @@ nmap  :cn<CR>
 
 " esay compile
 nmap r :w<CR>:!./%<CR>
+nmap 8 :w<CR>:!nim c -r --verbosity:2 %<CR>
 nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>
 nmap 3 :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

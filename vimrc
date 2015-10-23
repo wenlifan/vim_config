@@ -143,6 +143,9 @@ nmap 0 :bd<CR>
 nmap  :cp<CR>
 nmap  :cn<CR>
 
+nmap <leader>sf :vim /<c-r><c-w>/ %<cr>
+nmap <leader>sr :vim /<c-r><c-w>/ **/*.
+
 " esay compile
 nmap r :w<CR>:!./%<CR>
 nmap 8 :w<CR>:!nim c -r --verbosity:2 %<CR>

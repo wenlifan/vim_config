@@ -148,6 +148,6 @@ nmap <leader>sr :vim /<c-r><c-w>/ **/*.
 
 " esay compile
 nmap r :w<CR>:!./%<CR>
-nmap 8 :w<CR>:!nim c -r --verbosity:2 %<CR>
+nmap 8 :w<CR>:!nim c -r --threads:on --verbosity:2 %<CR>
 nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>
 nmap 3 :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

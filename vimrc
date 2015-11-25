@@ -23,6 +23,14 @@ set tabstop=4
 set shiftwidth=4
 set foldmethod=syntax "set default foldmethod
 set fileencodings=utf-8,ucs-bom,cp936
+
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+    set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+    set lines=999 columns=999
+endif
 syntax on
 
 set path+=/usr/include
@@ -137,11 +145,12 @@ let g:UltiSnipsEditSplit="vertical"
 " indentLine
 let g:identLine_enabled = 1
 
-nmap 2 :bn<CR>
-nmap 1 :bp<CR>
-nmap 0 :bd<CR>
 nmap  :cp<CR>
 nmap  :cn<CR>
+
+nmap  :bp<CR>
+nmap  :bn<CR>
+nmap  :bd<CR>
 
 nmap <leader>sf :vim /<c-r><c-w>/ %<cr>
 nmap <leader>sr :vim /<c-r><c-w>/ **/*.

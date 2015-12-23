@@ -76,6 +76,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
 Plugin 'Yggdroot/indentLine'
+Plugin 'JuliaLang/julia-vim'
 Plugin 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line

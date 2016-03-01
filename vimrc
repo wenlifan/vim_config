@@ -43,8 +43,6 @@ set path+=/usr/include/x86_64-linux-gnu/c++/4.9
 
 let mapleader=","
 
-map <leader>t <ESC>i#pragma once<CR><ESC>
-
 map Q gq
 inoremap <C-U> <C-G>u<C-U>
 
@@ -100,8 +98,8 @@ let g:ycm_key_list_previous_completion = ['<c-p>']
 let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '⚠'
 
-nnoremap <leader>f :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gf :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinition<CR>
 
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
@@ -132,7 +130,8 @@ let NERDTreeDirArrows=1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
+    \ && b:NERDTreeType == "primary") | q | endif
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -162,11 +161,13 @@ nmap  :bp<CR>
 nmap  :bn<CR>
 nmap  :bd<CR>
 
-nmap <leader>sf :vim /<c-r><c-w>/ %<cr>
-nmap <leader>sr :vim /<c-r><c-w>/ **/*.
+nmap <leader>sf :vim /<C-R><C-W>/ %<CR>
+nmap <leader>sr :vim /<C-R><C-W>/ **/*.
+nmap <leader>t :e#<CR>
 
 " esay compile
-nmap r :w<CR>:!./%<CR>
-nmap 8 :w<CR>:!nim c -r --threads:on --verbosity:2 %<CR>
-nmap 4 :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>
-nmap 3 :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>
+nmap <leader>mr :w<CR>:!./%<CR>
+nmap <leader>mn :w<CR>:!nim c -r --threads:on --verbosity:2 %<CR>
+nmap <leader>mg :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14
+    \ % -oa.out;./a.out<CR>
+nmap <leader>mc :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

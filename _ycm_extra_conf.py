@@ -86,9 +86,9 @@ flags = [
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/usr/include/c++/4.9',
+'/usr/include/c++/5',
 '-isystem',
-'/usr/include/x86_64-linux-gnu/c++/4.9',
+'/usr/include/x86_64-linux-gnu/c++/5',
 ]
 
 

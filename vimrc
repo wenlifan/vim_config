@@ -17,6 +17,7 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
+set cursorline
 set cursorcolumn
 set mouse=v
 set history=100		        " keep 50 lines of command line history
@@ -145,7 +146,6 @@ let g:syntastic_check_on_wq = 0
 
 " molockai
 colo molokai
-set cursorline
 let g:molokai_original=1
 
 " ultisnips

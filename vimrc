@@ -1,14 +1,15 @@
 set nocompatible
-set number
+set number                  " current line number
+set relativenumber          " relative line number
 set backspace=indent,eol,start
 set smarttab
 set expandtab
-set nobackup		" do not keep a backup file, use versions instead
-set ruler		    " show the cursor position all the time
-set showcmd		    " display incomplete commands
-set incsearch		" do incremental searching
+set nobackup		        " do not keep a backup file, use versions instead
+set ruler		            " show the cursor position all the time
+set showcmd		            " display incomplete commands
+set incsearch		        " do incremental searching
 set hlsearch
-set autoindent		" always set autoindenting on
+set autoindent		        " always set autoindenting on
 set smartindent
 set noignorecase
 set wildmenu
@@ -16,12 +17,13 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
+set cursorcolumn
 set mouse=v
-set history=100		" keep 50 lines of command line history
+set history=100		        " keep 50 lines of command line history
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
-set foldmethod=syntax "set default foldmethod
+set foldmethod=syntax       "set default foldmethod
 set fileencodings=utf-8,ucs-bom,cp936
 
 if has("gui_running")
@@ -61,7 +63,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'bling/vim-airline'
@@ -75,7 +77,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomasr/molokai'
-Plugin 'Yggdroot/indentLine'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'zah/nimrod.vim'
 
@@ -142,9 +143,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/vim-snippets/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
-
-" indentLine
-let g:identLine_enabled = 1
 
 nmap  :cp<CR>
 nmap  :cn<CR>

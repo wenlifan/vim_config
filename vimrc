@@ -163,7 +163,6 @@ nmap  :bd<CR>
 
 nmap <leader>sf :vim /<C-R><C-W>/ %<CR>
 nmap <leader>sr :vim /<C-R><C-W>/ **/*.
-nmap <leader>t :e#<CR>
 
 " esay compile
 nmap <leader>mr :w<CR>:!./%<CR>

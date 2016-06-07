@@ -80,7 +80,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomasr/molokai'
 "Plugin 'JuliaLang/julia-vim'
-"Plugin 'zah/nimrod.vim'
+Plugin 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

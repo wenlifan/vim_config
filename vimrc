@@ -80,7 +80,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomasr/molokai'
 "Plugin 'JuliaLang/julia-vim'
-Plugin 'zah/nimrod.vim'
+Plugin 'baabelfish/nvim-nim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -168,7 +168,7 @@ nmap <leader>sr :vim /<C-R><C-W>/ **/*.
 " esay compile
 nmap <leader>mr :w<CR>:!./%<CR>
 nmap <leader>md :w<CR>:!rdmd -w -g %<CR>
-nmap <leader>mn :w<CR>:!nim c -r -d:nimCoroutines --threads:on --verbosity:2 %<CR>
+nmap <leader>mn :w<CR>:!nim c -r --threads:on --verbosity:2 %<CR>
 nmap <leader>mg :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14
     \ % -oa.out;./a.out<CR>
 nmap <leader>mc :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

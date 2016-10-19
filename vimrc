@@ -31,8 +31,8 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
     set lines=999 columns=999
+    set guifont=UbuntuMonoDerivativePowerline\ Nerd\ Font\ 12
 endif
 syntax on
 
@@ -66,10 +66,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter' " <leader>cc: comment, <leader>cu: uncomment
 Plugin 'scrooloose/syntastic'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -79,8 +80,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomasr/molokai'
-"Plugin 'JuliaLang/julia-vim'
-Plugin 'baabelfish/nvim-nim'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'fatih/vim-go'
+Plugin 'keith/swift.vim'
+Plugin 'JuliaLang/julia-vim'
+Plugin 'zah/nimrod.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -168,7 +172,9 @@ nmap <leader>sr :vim /<C-R><C-W>/ **/*.
 " esay compile
 nmap <leader>mr :w<CR>:!./%<CR>
 nmap <leader>md :w<CR>:!rdmd -w -g %<CR>
-nmap <leader>mn :w<CR>:!nim c -r --threads:on --verbosity:2 %<CR>
-nmap <leader>mg :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14
+nmap <leader>mg :w<CR>:!go run %<CR>
+nmap <leader>ms :w<CR>:!swift %<CR>
+nmap <leader>mn :w<CR>:!nim c -r -d:nimCoroutines --threads:on --verbosity:2 %<CR>
+nmap <leader>mv :w<CR>:!g++ --version;g++ -fdiagnostics-color=auto -Wall -pthread -std=c++14
     \ % -oa.out;./a.out<CR>
 nmap <leader>mc :w<CR>:!clang++ --version;clang++ -Wall -pthread -std=c++14 % -oa.out;./a.out<CR>

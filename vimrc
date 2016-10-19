@@ -32,6 +32,7 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set lines=999 columns=999
+    set ambiwidth=double
     set guifont=UbuntuMonoDerivativePowerline\ Nerd\ Font\ 12
 endif
 syntax on

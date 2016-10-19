@@ -52,7 +52,7 @@ flags = [
 # a "-std=<something>".
 # For a C project, you would set this to something like 'c99' instead of
 # 'c++11'.
-'-std=c++14',
+'-std=c++1z',
 # ...and the same thing goes for the magic -x option which specifies the
 # language that the files to be compiled are written in. This is mostly
 # relevant for c++ headers.
@@ -81,14 +81,22 @@ flags = [
 #'./tests/gmock',
 #'-isystem',
 #'./tests/gmock/include',
+# '-isystem',
+# './tests/gmock/gtest',
+# '-isystem',
+# './tests/gmock/gtest/include',
+# '-isystem',
+# './tests/gmock',
+# '-isystem',
+# './tests/gmock/include',
 '-isystem',
 '/usr/include',
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/usr/include/c++/5',
+'/usr/include/c++/6',
 '-isystem',
-'/usr/include/x86_64-linux-gnu/c++/5',
+'/usr/include/x86_64-linux-gnu/c++/6',
 ]
 
 
@@ -190,7 +198,4 @@ def FlagsForFile( filename, **kwargs ):
     relative_to = DirectoryOfThisScript()
     final_flags = MakeRelativePathsInFlagsAbsolute( flags, relative_to )
 
-  return {
-    'flags': final_flags,
-    'do_cache': True
-  }
+  return { 'flags': final_flags }

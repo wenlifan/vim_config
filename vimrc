@@ -81,6 +81,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tomasr/molokai'
+"Plugin 'joshdick/onedark.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'fatih/vim-go'
 Plugin 'keith/swift.vim'
@@ -118,6 +119,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
+"let g:airline_theme='onedark'
 
 " ctrlp
 let g:ctrlp_map = '<c-\>'
@@ -151,7 +153,10 @@ let g:syntastic_check_on_wq = 0
 
 " molockai
 colo molokai
-let g:molokai_original=1
+
+" onedark
+"colo onedark
+"let g:onedark_termcolors=256
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
